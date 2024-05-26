@@ -95,10 +95,11 @@ const RegisterPage = () => {
             "password": password
         }
 
+        //  api request
         registerUserApi(data).then((res) => {
 
             // Received data: success, meesage
-            if (res.data.success == false) {
+            if (res.data.success === false) {
                 toast.error(res.data.message)
             } else {
                 toast.success(res.data.message)
